@@ -68,7 +68,7 @@ Follow these steps to run the program on your computer.
 Open your terminal and run:
 
 ```bash
-git clone https://github.com/your-username/expense-tracker.git
+git clone https://github.com/Rifat-789/Personal-Expense-Tracker-C-.git
 ```
 
 This will download the project to your computer.
@@ -78,7 +78,7 @@ This will download the project to your computer.
 ### 2. Navigate to the Project Folder
 
 ```bash
-cd expense-tracker
+cd Personal-Expense-Tracker
 ```
 
 ---
@@ -88,13 +88,13 @@ cd expense-tracker
 Compile the program using GCC:
 
 ```bash
-gcc main.c -o expense_tracker
+gcc main.c -o Personal-Expense-Tracker
 ```
 
 This will create an executable file named:
 
 ```
-expense_tracker
+Personal-Expense-Tracker
 ```
 
 ---
@@ -104,13 +104,13 @@ expense_tracker
 #### On Linux / macOS
 
 ```bash
-./expense_tracker
+./Personal-Expense-Tracker
 ```
 
 #### On Windows
 
 ```bash
-expense_tracker.exe
+Personal-Expense-Tracker.exe
 ```
 
 ---
