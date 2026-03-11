@@ -53,25 +53,64 @@ This project focuses on strengthening core programming concepts:
 3. Search Expense
 4. Delete Expense
 5. Show Summary
-6. Save to File
-7. Load from File
+6. Save Changes
 8. Exit
 ```
 
 ---
 
-## How to Compile and Run
+## How to Run the Project
 
-### Compile
+Follow these steps to run the program on your computer.
+
+### 1. Clone the Repository
+
+Open your terminal and run:
+
+```bash
+git clone https://github.com/your-username/expense-tracker.git
+```
+
+This will download the project to your computer.
+
+---
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd expense-tracker
+```
+
+---
+
+### 3. Compile the Program
+
+Compile the program using GCC:
 
 ```bash
 gcc main.c -o expense_tracker
 ```
 
-### Run
+This will create an executable file named:
+
+```
+expense_tracker
+```
+
+---
+
+### 4. Run the Program
+
+#### On Linux / macOS
 
 ```bash
 ./expense_tracker
+```
+
+#### On Windows
+
+```bash
+expense_tracker.exe
 ```
 
 ---
