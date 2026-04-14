@@ -1,23 +1,26 @@
-#ifndef FUNCTIONS_H
+#ifndef FUNCTIONS_H                     // prevents the function being included more then ones.
 #define FUNCTIONS_H
 
 #include<stdio.h>
+#include<stdlib.h>
 
-typedef struct{
+typedef struct {
     char date[11];
-    char catagory[30];
+    char category[30];
     char title[50];
     float amount;
 } Expense;
 
+void loadData(Expense expenses[], int *count);
+void printTitle(int padding, char title[]);
+void printMenu(int choice);
 void addExpense(Expense expenses[], int *count);
 void viewExpenses(Expense expenses[], int count);
 void deletExpense(Expense expenses[], int *count);
 void showSummary(Expense expenses[], int count);
 int totalExpenseMonth(Expense expenses[], int count);
 void save(Expense expenses[], int count);
-void exit(Expense expenses[], int count);
-
+void exitProgram(Expense expenses[], int count);
 
 
 
