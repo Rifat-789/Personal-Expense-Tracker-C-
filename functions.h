@@ -19,7 +19,7 @@ void viewExpenses(Expense expenses[], int count);
 void deletExpense(Expense expenses[], int *count);
 void showSummary(Expense expenses[], int count);
 int totalExpenseMonth(Expense expenses[], int count);
-void save(Expense expenses[], int count);
+void saveData(Expense expenses[], int count);
 void exitProgram(Expense expenses[], int count);
 
 
