@@ -14,7 +14,8 @@ typedef struct {
 void loadData(Expense expenses[], int *count);
 void printTitle(int padding, char title[]);
 void printMenu(int choice);
-void addExpense(Expense expenses[], int *count);
+void diposit(Expense expenses[], int *count);
+void spend(Expense expenses[], int *count);
 void viewExpenses(Expense expenses[], int count);
 void deletExpense(Expense expenses[], int *count);
 void showSummary(Expense expenses[], int count);

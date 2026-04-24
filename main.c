@@ -17,7 +17,7 @@ int main(){
     loadData(expenses, &count);
 
     do{
-        #ifdef _WIN32                       // Clears the interface each time menu loop repeats
+        #ifdef _WIN32                       
             system("cls");
         #else
             system("clear");
@@ -28,6 +28,37 @@ int main(){
 
         printMenu(choice);
         scanf("%d", &choice);
+
+        switch (choice)
+        {
+        case 1:
+            
+
+
+            break;
+
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            
+            break;
+        case 6:
+            
+            break;
+        case 7:
+            
+            break;
+        
+        default:
+            break;
+        }
 
 
 

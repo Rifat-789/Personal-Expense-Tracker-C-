@@ -14,7 +14,7 @@ void loadData(Expense expenses[], int *count){
     fclose(pFile);
 }
 
-void printTitle(int padding, char title){
+void printTitle(int padding, char title[]){
     printf("========================================\n");
 
     for (int i = 0; i < padding; i++){
@@ -24,6 +24,17 @@ void printTitle(int padding, char title){
     printf("%s\n", title);
 
     printf("========================================\n");
+}
+
+void printMenu (int choice){
+    printf("\n1. Diposite Money\n");
+    printf("2. Spend Money\n");
+    printf("3. View Expenses Per Catagory\n");
+    printf("4. Delete Expense\n");
+    printf("5. Show Summary\n");
+    printf("6. Show Monthly Expense\n");
+    printf("7. Save Data\n");
+    printf("8. Exit Program\n");
 }
 
 void saveData(Expense expenses[], int count){
