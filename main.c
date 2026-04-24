@@ -13,8 +13,10 @@ int main(){
 
     int choice = 0;
     Expense expenses[100];
-    int count = 0;
-    loadData(expenses, &count);
+    Deposit deposits[100];
+    int countExpense = 0;
+    int countDeposit = 0;
+    loadExpense(expenses, &countExpense);
 
     do{
         #ifdef _WIN32                       
@@ -32,7 +34,11 @@ int main(){
         switch (choice)
         {
         case 1:
-            
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
 
 
             break;
