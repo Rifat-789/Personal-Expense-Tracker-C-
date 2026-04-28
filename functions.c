@@ -42,12 +42,15 @@ void printTitle(int padding, char title[]){
 void printMenu (int choice){
     printf("\n1. Diposite Money\n");
     printf("2. Spend Money\n");
-    printf("3. View Expenses Per Catagory\n");
-    printf("4. Delete Expense\n");
-    printf("5. Show Summary\n");
-    printf("6. Show Monthly Expense\n");
-    printf("7. Save Data\n");
-    printf("8. Exit Program\n");
+    printf("3. View Total Deposit\n");
+    printf("4. View Total Expense\n");
+    printf("5. Delete Deposit\n");
+    printf("6. Delete Expense\n");
+    printf("7. Show Summary\n");
+    printf("8. Save Data\n");
+    printf("9. Exit Program\n");
+    printf("\n");
+    printf("Enter Your Choice: ");
 }
 
 void saveExpense(Expense expenses[], int countExpense){

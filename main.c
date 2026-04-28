@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 #include<math.h>
 #include<stdlib.h>
 #include<ctype.h>
@@ -41,26 +42,102 @@ int main(){
                 system("clear");
             #endif
 
-
+            printf("\nPress Enter to Continue");
+            getchar();
+            getchar();
             break;
 
         case 2:
-            
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
+            getchar();
             break;
+
         case 3:
-            
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
             break;
+
         case 4:
-            
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
             break;
+
         case 5:
-            
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
+            getchar();
             break;
+
         case 6:
-            
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
+            getchar();
             break;
+
         case 7:
-            
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
+            break;
+
+        case 8:
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
+            getchar();
+            break;
+
+        case 9:
+            #ifdef _WIN32                       
+                system("cls");
+            #else
+                system("clear");
+            #endif
+
+            printf("\nPress Enter to Continue");
+            getchar();
+            getchar();
             break;
         
         default:
@@ -70,7 +147,7 @@ int main(){
 
 
 
-    } while (choice != 7);
+    } while (choice != 9);
 
     return 0;
 }
