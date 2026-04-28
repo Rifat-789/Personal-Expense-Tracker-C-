@@ -17,6 +17,7 @@ int main(){
     int countExpense = 0;
     int countDeposit = 0;
     loadExpense(expenses, &countExpense);
+    loadDeposit(deposits, &countDeposit);
 
     do{
         #ifdef _WIN32                       

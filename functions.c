@@ -1,16 +1,29 @@
 #include "functions.h"
 #include<stdio.h>
 
-void loadData(Expense expenses[], int *count){
+void loadExpense(Expense expenses[], int *countExpense){
     FILE *pFile = fopen("expense.dat", "rb");
 
     if (pFile == NULL){
-        *count = 0;
+        *countExpense = 0;
         return;
     }
 
-    fread(count, sizeof(int), 1, pFile);
-    fread(expenses, sizeof(Expense), *count, pFile);
+    fread(countExpense, sizeof(int), 1, pFile);
+    fread(expenses, sizeof(Expense), *countExpense, pFile);
+    fclose(pFile);
+}
+
+void loadDeposit(Deposit deposits[], int *countDeposit){
+    FILE *pFile = fopen("deposit.dat", "rb");
+
+    if (pFile == NULL){
+        *countDeposit = 0;
+        return;
+    }
+
+    fread(countDeposit, sizeof(int), 1, pFile);
+    fread(deposits, sizeof(Deposit), *countDeposit, pFile);
     fclose(pFile);
 }
 
@@ -37,7 +50,7 @@ void printMenu (int choice){
     printf("8. Exit Program\n");
 }
 
-void saveData(Expense expenses[], int count){
+void saveExpense(Expense expenses[], int countExpense){
     FILE *pFile = fopen("expense.dat", "wb");
 
     if (pFile == NULL){
@@ -45,8 +58,22 @@ void saveData(Expense expenses[], int count){
         return;
     }
 
-    fwrite(&count, sizeof(int), 1, pFile);
-    fwrite(expenses, sizeof(Expense), count, pFile);
+    fwrite(&countExpense, sizeof(int), 1, pFile);
+    fwrite(expenses, sizeof(Expense), countExpense, pFile);
+
+    fclose(pFile);
+}
+
+void saveDeposit(Deposit deposits[], int countDeposit){
+    FILE *pFile = fopen("deposit.dat", "wb");
+
+    if (pFile == NULL){
+        printf("Error Saving Data!");
+        return;
+    }
+
+    fwrite(&countDeposit, sizeof(int), 1, pFile);
+    fwrite(deposits, sizeof(Deposit), countDeposit, pFile);
 
     fclose(pFile);
 }

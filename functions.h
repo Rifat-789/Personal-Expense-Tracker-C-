@@ -16,18 +16,20 @@ typedef struct {
     int amount;
 } Expense;
 
-void loadExpense(Expense expenses[], int *count);
+void loadExpense(Expense expenses[], int *countExpense);
+void loadDeposit(Deposit deposits[], int *countDeposit);
 void printTitle(int padding, char title[]);
 void printMenu(int choice);
-void deposit(Deposit deposits[], int *count);
-void spend(Expense expenses[], int *count);
-void viewDiposits(Deposit deposits[]);
-void viewExpenses(Expense expenses[], int count);
-void deletExpense(Expense expenses[], int *count);
-void showSummary(Expense expenses[], int count);
-int totalExpenseMonth(Expense expenses[], int count);
-void saveData(Expense expenses[], int count);
-void exitProgram(Expense expenses[], int count);
+void deposit(Deposit deposits[], int *countDeposit);
+void spend(Expense expenses[], int *countExpense);
+void totalDiposits(Deposit deposits[]);
+void totalExpenses(Expense expenses[], int countExpense);
+void deletDeposit(Deposit deposits[], int *countDeposit);
+void deletExpense(Expense expenses[], int *countExpense);
+void showSummary(Expense expenses[], int countExpense);
+void saveExpense(Expense expenses[], int countExpense);
+void saveDeposit(Deposit deposits[], int countDeposit);
+void exitProgram(Expense expenses[], int countExpense);
 
 
 
