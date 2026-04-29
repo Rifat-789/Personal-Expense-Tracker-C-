@@ -12,7 +12,6 @@ typedef struct {
 typedef struct {
     char date[11];
     char category[30];
-    char title[50];
     int amount;
 } Expense;
 
