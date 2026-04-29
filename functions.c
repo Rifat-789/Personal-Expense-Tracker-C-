@@ -57,7 +57,27 @@ void printMenu (int choice){
 }
 
 void deposit(Deposit deposits[], int *countDeposit){
-   
+    int amount = 0;
+
+    printf("Enter deposit value: ");
+    if (scanf("%d", &deposits[*countDeposit].amount) != 1){
+        printf("Invalid input! Input must be a number\n");
+        while (getchar() != '\n');
+    }
+
+    getchar();
+
+    if (deposits[*countDeposit].amount < 0){
+        printf("Invalid value! Value can't be negative.");
+        return;
+    }
+
+    time_t now = time(NULL);
+    struct tm *current = localtime(&now);
+
+    strftime(deposits[*countDeposit].date, sizeof(deposits[*countDeposit].date), "%Y-%m-%d %H:%M", current);
+
+    printf("Deposit successful!\n");
 }
 
 void spend(Expense expenses[], int *countExpense){
