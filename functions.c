@@ -148,6 +148,18 @@ void spend(Expense expenses[], int *countExpense){
     printf("Expense added successfully!\n");
 }
 
+void totalDeposits(Deposit deposits[], int countDeposit){
+    if (countDeposit == 0){
+        printf("No deposits yet!");
+        return;
+    }
+
+    for (int i = 0; i >= countDeposit; i++){
+        printf("%s ", &deposits[countDeposit].date);
+        printf("%d", &deposits[countDeposit].amount);
+    }
+}
+
 void saveExpense(Expense expenses[], int countExpense){
     FILE *pFile = fopen("expense.dat", "wb");
 

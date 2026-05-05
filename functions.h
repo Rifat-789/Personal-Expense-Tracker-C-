@@ -21,7 +21,7 @@ void printTitle(int padding, char title[]);
 void printMenu(int choice);
 void deposit(Deposit deposits[], int *countDeposit);
 void spend(Expense expenses[], int *countExpense);
-void totalDiposits(Deposit deposits[]);
+void totalDeposits(Deposit deposits[], int countDeposit);
 void totalExpenses(Expense expenses[], int countExpense);
 void deleteDeposit(Deposit deposits[], int *countDeposit);
 void deleteExpense(Expense expenses[], int *countExpense);

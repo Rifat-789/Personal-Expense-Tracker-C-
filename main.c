@@ -42,8 +42,8 @@ int main(){
                 system("clear");
             #endif
 
+            deposit(deposits, &countDeposit);
             printf("\nPress Enter to Continue");
-            getchar();
             getchar();
             break;
 
@@ -54,6 +54,7 @@ int main(){
                 system("clear");
             #endif
 
+            spend(expenses, &countExpense);
             printf("\nPress Enter to Continue");
             getchar();
             getchar();
@@ -66,6 +67,7 @@ int main(){
                 system("clear");
             #endif
 
+            totalDeposits(deposits, countDeposit);
             printf("\nPress Enter to Continue");
             getchar();
             break;
