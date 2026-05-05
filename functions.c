@@ -77,6 +77,7 @@ void deposit(Deposit deposits[], int *countDeposit){
 
     strftime(deposits[*countDeposit].date, sizeof(deposits[*countDeposit].date), "%Y-%m-%d %H:%M", current);
 
+    (*countDeposit)++;
     printf("Deposit successful!\n");
 }
 
@@ -148,15 +149,15 @@ void spend(Expense expenses[], int *countExpense){
     printf("Expense added successfully!\n");
 }
 
-void totalDeposits(Deposit deposits[], int countDeposit){
-    if (countDeposit == 0){
+void totalDeposits(Deposit deposits[], int *countDeposit){
+    if (*countDeposit == 0){
         printf("No deposits yet!");
         return;
     }
 
-    for (int i = 0; i >= countDeposit; i++){
-        printf("%s ", &deposits[countDeposit].date);
-        printf("%d", &deposits[countDeposit].amount);
+    for (int i = 0; i < *countDeposit; i++){
+        printf("%s ", deposits[i].date);
+        printf("%d",   deposits[i].amount);
     }
 }
 

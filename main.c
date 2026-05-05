@@ -67,8 +67,9 @@ int main(){
                 system("clear");
             #endif
 
-            totalDeposits(deposits, countDeposit);
+            totalDeposits(deposits, &countDeposit);
             printf("\nPress Enter to Continue");
+            getchar();
             getchar();
             break;
 
@@ -125,6 +126,8 @@ int main(){
                 system("clear");
             #endif
 
+            saveExpense(expenses, countExpense);
+            saveDeposit(deposits, countDeposit);
             printf("\nPress Enter to Continue");
             getchar();
             getchar();
