@@ -5,12 +5,12 @@
 #include<stdlib.h>
 
 typedef struct {
-    char date[11];
+    char date[25];
     int amount;
 } Deposit;
 
 typedef struct {
-    char date[11];
+    char date[25];
     char category[30];
     int amount;
 } Expense;

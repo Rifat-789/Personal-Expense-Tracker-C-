@@ -43,11 +43,11 @@ void printTitle(int padding, char title[]){
 }
 
 void printMenu (int choice){
-    printf("\n1. Diposite Money\n");
+    printf("\n1. Deposite Money\n");
     printf("2. Spend Money\n");
     printf("3. Current Balance\n");
-    printf("4. View Total Deposit\n");
-    printf("5. View Total Expense\n");
+    printf("4. View Deposit History\n");
+    printf("5. View Expense History\n");
     printf("6. Delete Deposit\n");
     printf("7. Delete Expense\n");
     printf("8. Save Data\n");
@@ -75,7 +75,7 @@ void deposit(Deposit deposits[], int *countDeposit){
     time_t now = time(NULL);
     struct tm *current = localtime(&now);
 
-    strftime(deposits[*countDeposit].date, sizeof(deposits[*countDeposit].date), "%Y-%m-%d %H:%M", current);
+    strftime(deposits[*countDeposit].date, 25, "%Y-%m-%d %H:%M", current);
 
     (*countDeposit)++;
     printf("Deposit successful!\n");
@@ -169,10 +169,19 @@ void totalDeposits(Deposit deposits[], int countDeposit){
         return;
     }
 
-    for (int i = 0; i < countDeposit; i++){
-        printf("%s ", deposits[i].date);
-        printf("%d",   deposits[i].amount);
+    printf("\n%-25s %-10s\n", "Date & Time", "Amount");
+    for (int i = 0; i < 35; i++){
+        printf("-");
     }
+
+    printf("\n");
+
+    for (int i = 0; i < countDeposit; i++){
+        printf("%-25s %-10d\n", deposits[i].date, deposits[i].amount);
+    }
+
+    printf("\n");
+    printf("End of the list!");
 }
 
 void saveExpense(Expense expenses[], int countExpense){
