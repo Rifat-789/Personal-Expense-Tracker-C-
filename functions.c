@@ -45,11 +45,11 @@ void printTitle(int padding, char title[]){
 void printMenu (int choice){
     printf("\n1. Diposite Money\n");
     printf("2. Spend Money\n");
-    printf("3. View Total Deposit\n");
-    printf("4. View Total Expense\n");
-    printf("5. Delete Deposit\n");
-    printf("6. Delete Expense\n");
-    printf("7. Show Summary\n");
+    printf("3. Current Balance\n");
+    printf("4. View Total Deposit\n");
+    printf("5. View Total Expense\n");
+    printf("6. Delete Deposit\n");
+    printf("7. Delete Expense\n");
     printf("8. Save Data\n");
     printf("9. Exit Program\n");
     printf("\n");
@@ -149,13 +149,27 @@ void spend(Expense expenses[], int *countExpense){
     printf("Expense added successfully!\n");
 }
 
-void totalDeposits(Deposit deposits[], int *countDeposit){
-    if (*countDeposit == 0){
+int currentBalance(Expense expenses[], Deposit deposits[], int countExpense, int countDeposit){
+    int totalDeposit = 0, totalExpense = 0, balance = 0;
+    for (int i = 0; i < countDeposit; i++){
+        totalDeposit += deposits[i].amount;
+    }
+
+    for (int i = 0; i < countExpense; i++){
+        totalExpense += expenses[i].amount;
+    }
+
+    balance = totalDeposit - totalExpense;
+    printf("%d", balance);
+}
+
+void totalDeposits(Deposit deposits[], int countDeposit){
+    if (countDeposit == 0){
         printf("No deposits yet!");
         return;
     }
 
-    for (int i = 0; i < *countDeposit; i++){
+    for (int i = 0; i < countDeposit; i++){
         printf("%s ", deposits[i].date);
         printf("%d",   deposits[i].amount);
     }

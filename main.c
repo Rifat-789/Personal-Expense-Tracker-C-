@@ -57,7 +57,6 @@ int main(){
             spend(expenses, &countExpense);
             printf("\nPress Enter to Continue");
             getchar();
-            getchar();
             break;
 
         case 3:
@@ -67,7 +66,7 @@ int main(){
                 system("clear");
             #endif
 
-            totalDeposits(deposits, &countDeposit);
+            currentBalance(expenses, deposits, countExpense, countDeposit);
             printf("\nPress Enter to Continue");
             getchar();
             getchar();
@@ -80,7 +79,9 @@ int main(){
                 system("clear");
             #endif
 
+            totalDeposits(deposits, countDeposit);
             printf("\nPress Enter to Continue");
+            getchar();
             getchar();
             break;
 
@@ -91,6 +92,7 @@ int main(){
                 system("clear");
             #endif
 
+            
             printf("\nPress Enter to Continue");
             getchar();
             getchar();
